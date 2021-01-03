@@ -1,0 +1,17 @@
+body{
+background-color: currentColor;
+}
+.icon{
+	cursor:pointer;
+}
+.closebtn{
+  cursor:pointer;
+}
+.log{
+	font-family: cursive;
+}
+
+.rulepop{
+	z-index: 1;
+}
+
