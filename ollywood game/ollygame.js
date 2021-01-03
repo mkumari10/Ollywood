@@ -139,5 +139,14 @@ $('.hint').on('click',function(){
     alert("no more hint left");
 });
 
+  
+//hide footer in mobile
+$('input[type="text"]').focus(function(){
+   $('.footer').hide();
+});
 
+//show footer in mobile
+$('input[type="text"]').focusout(function(){
+   $('.footer').show();
+});
 });
