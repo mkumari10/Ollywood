@@ -80,7 +80,7 @@ if((answer.toUpperCase() === movies.get(array[j]).toUpperCase()))
     {
       $('#chanceleft').text(chleft);
       alert('Opps you loss');
-      //nextpage();
+      nextpage();
     }
  }
 });
