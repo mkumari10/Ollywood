@@ -8,6 +8,14 @@ $(window).resize(function(){
 } 
 });
 
+  
+  
+//login close btn
+$('.closebtn').on('click',function(e){
+         $('#Loginform').addClass('d-none');      
+         $('#loginbtn').show();
+         $('#rules').removeClass('col-sm-6 d-inline d-flex-column justify-content-center position-absolute rulepop');                  
+});
    
    //rules and card popup div
 $('.score').on('click',function(e){
@@ -15,7 +23,7 @@ $('.score').on('click',function(e){
     if(show === "#rules")
      { 
       $(show).addClass('col-sm-6 d-inline d-flex-column position-absolute rulepop');
-      $('body').not('.rulepop').css('background-color','rgba(255,255,255,0.8)');
+     // $('body').not('.rulepop').css('background-color','rgba(255,255,255,0.8)');
      }
     else if(show === "#card")
        $(show).addClass('cardpop');   
@@ -33,9 +41,9 @@ let nextpage = () => {
 
   //images changes
  // let moviearr = iterator(imgname);
-   for(let i in imgname){
+  /* for(let i in imgname){
        imgname[i];
-   }
+   }*/
     while(j<=imgname.length)
     {
      $('.movieimages > img').not('.d-none').addClass('d-none');
@@ -50,13 +58,24 @@ let nextpage = () => {
     clearInterval(setid);
     timecall();
   }  
+   else{
+    $('#card').removeClass('d-none').addClass('d-flex');
+    $('.marks').text(`Score: ${score}`);
+    if(score>=8)
+      $('.greeting').text('Awesome!!');
+    else if(score>=4)
+      $('.greeting').text('Well Done!!');
+    else 
+    $('.greeting').text('Try Again!!');
+    clearInterval(setid);
+  }
 }
 
 
 
 
 //changes after clicking next buttons
-let i=2;
+let i=2,score=0;
 let imgname = [...$('.movieimages > img:not(:first)')], j=0;
 
 $('.nextbtn').on('click',function(e){ 
@@ -64,17 +83,18 @@ $('.nextbtn').on('click',function(e){
 let answer = $('input[type="text"]').val();
 let chleft = $('#chanceleft').text();
 
-
+if(answer.length)
+{
 //checking correct answer
 if((answer.toUpperCase() === movies.get(array[j]).toUpperCase()))
  {
+   score+=1;
    nextpage();
  }
  else{
     if(chleft>0)
     {  
        $('#chanceleft').text(--chleft);
-       console.log(chleft);
     }
     if(chleft === 0)
     {
@@ -83,6 +103,7 @@ if((answer.toUpperCase() === movies.get(array[j]).toUpperCase()))
       nextpage();
     }
  }
+}
 });
 
 //timer
