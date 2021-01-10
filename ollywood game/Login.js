@@ -24,3 +24,14 @@ $('#start').on('click',function(e){
    else
    	$('#start').attr('href','Pictures.html');    
 });
+
+
+//hide footer in mobile
+$('input[type="text"]').focus(function(){
+   $('.footer').hide();
+});
+
+//show footer in mobile
+$('input[type="text"]').focusout(function(){
+   $('.footer').show();
+});
