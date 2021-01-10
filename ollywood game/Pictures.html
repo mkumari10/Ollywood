@@ -2,151 +2,140 @@
 <html>
 <head>
 	<title>Pictures Quize</title>
-	<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale = 1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale = 1, height=device-height">
 	<link rel="stylesheet"  href="bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="game.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
-<body>
+<body  class="bodycontent">
    <div class="container-fluid">
 
-   	<!-- Header -->
-      <div class="row">
-      	<nav class="col-12 navbar navbar-light bg-light">
-      		<h2 class="text-dark text-center">Guess Film Name</h2>
-         <ul class="nav nav-pills ml-sm-auto">
-           <li class="nav-item">
-              <a class="nav-link text-decoration-none p-1" href="index.html">Home</a>
-           </li> 
-           <li class="nav-item">
-              <a class="nav-link text-decoration-none d-lg-none score p-1" href="#rules">Rules</a>
-           </li>
-           <li class="nav-item">
-              <a class="nav-link text-decoration-none p-1 hint" href="#">Hint</a>
-           </li>
-           <li class="nav-item">
-              <a class="nav-link text-decoration-none score p-1" href="#card" >Card</a>
-           </li>
-         </ul>
-        </nav>
-      </div>
-
+      
     <!-- Body -->
-    <div class="row bg-white">
+    <div class="row mb-5">
 
-         <!-- Rules area -->
-      	    <div class="col-lg-3 d-lg-block d-none bg-info" id="rules">
-      	      <div class="d-flex">
-      	      	<em>Rules</em>
-      	      	<span class="ml-auto d-lg-none ml-auto icon closebtn">&#10006;</span>
-      	      </div> 
-      		 <div class="col d-md-3 border border-dark m-1">
-                <h4 class="text-white text-md-center">Rule 1</h4>
-              </div>
-              <div class="col d-md-3 border border-dark m-1">
-                <h4 class="text-white text-md-center">Rule 2</h4>
-              </div>
-              <div class="col d-md-3 border border-dark m-1">
-                <h4 class="text-white text-md-center">Rule 3</h4>
-              </div>
-              <div class="col d-md-3 border border-dark m-1">
-                <h4 class="text-white text-md-center">Rule 4</h4>
-              </div>
-      	   </div>
-
+    
          <!-- Play Board -->
-            <div class="col-lg bg-danger p-4">
+            <div class="col-lg p-4">
                <div class="row mb-2">
-               	  <div class="col incre d-flex">
-            	      <h5 class="d-sm-inline ml-auto"><1/10></h5>
-            	  </div> 
+                <div class="col text-center"><h1 class="ollycross">Ollywood</h1></div> 
                </div>
-               <div class="row playbrd border">
-                   <div class="col-sm-3 bg-warning d-sm-flex align-items-center flex-wrap">
-                   	  <div class="row">
-                   	     <div class="col-sm-12 col-4 border p-0">
-                   	     	<p class="col-lg-5  d-inline-block text-center mb-0 p-1">Hint</p>
-                   	     	<!--<p class="col-lg-5 d-inline-block text-center mb-0 p-1 d-sm-none">&#128273;</p>-->
-                   	     	<p class="col-lg-5  d-inline-block hintleft text-center mb-0">3</p>
+               <div class="row">
+                   <div class="col-sm-2 playbrd d-sm-flex flex-wrap">
+                   	  <div class="row align-content-center justify-content-center">
+                   	     <!-- <div class="col-sm-12 col-4 page">
+                          <div class="row">
+                            <div class="col-lg-6 d-inline-block text-center">
+                              <img src="images/hint.png" href="#" class="img-fluid hint icon">
+                            </div>
+                            <div class="col-lg-6 d-inline-flex align-items-center">
+                              <p class="hintleft font-weight-bold text-center fsize border text-light p-2">3</p>
+                            </div> 
+                          </div>
+                   	     </div> -->
+                        <div class="col-sm-12 col-4 page">
+                          <div class="row mb-3">
+                          <div class="col-lg-6 d-inline-block text-center">
+                            <a href="index.html"><img src="images/home.png" class="img-fluid icon"></a>
+                          </div>
+                         </div>
+                        </div> 
+                   	     <div class="col-sm-12 col-4 page">
+                          <div class="row">
+                           <div class="col-lg-6 d-inline-block text-center">
+                             <img src="images/time.png" class="img-fluid">
+                           </div>
+                           <div class="col-lg-6 d-inline-flex align-items-center">
+                   	     	  <p class="text-light text-center font-weight-bold mb-0 fsize border p-2" id="countdown">1:00</p>
+                           </div>
+                          </div>
                    	     </div>
-                   	     <div class="col-sm-12 col-4 border p-0">
-                   	     	<p class="col-lg-5 d-inline-block text-center mb-0 p-1">Time</p>
-                   	     	<!--<p class="col-lg-5 d-inline-block text-center mb-0 p-1 d-sm-none">&#128336;</p>-->
-                   	     	<p class="col-lg-5 d-inline-block text-center mb-0" id="countdown">1:00</p>
+                   	     <div class="col-sm-12 col-4 page">
+                          <div class="row">
+                          <div class="col-lg-6 d-inline-block text-center">
+                            <img src="images/chance.png" class="img-fluid">
+                          </div>
+                          <div class="col-lg-6 d-inline-flex align-items-center " >
+                   	     	  <p class="text-light text-center font-weight-bold mb-0 fsize border p-2" id="chanceleft">3</p>
+                          </div>
+                          </div>
                    	     </div>
-                   	     <div class="col-sm-12 col-4 border p-0">
-                   	     	<p class="col-lg-5 d-inline-block text-center mb-0 p-1">Chances</p>
-                   	     	<!--<p class="col-lg-5 d-inline-block text-center mb-0 p-1 d-sm-none">&#128336;</p>-->
-                   	     	<p class="col-lg-5 d-inline-block text-center mb-0" id="chanceleft">5</p>
-                   	     </div>
+                         <div class="col-sm-12 col-4 page">
+                         </div>
                    	  </div>
-                   </div>	
-      		       <div class="col-sm-9 bg-dark">
+
+                 </div> 
+	
+      		       <div class="col-sm-10 bgdark border">
       		          <div class="row text-center">
-      		          	 <div class="col-12 bg-success text-center"><h2>Ollywood</h2></div>
-      		             <div class="col m-3 p-0 movieimages">
-      		             	<img src="images/pic1.JPG" class="img-fluid img-thumbnail">
-      		             	<img src="images/guess.png" class="img-fluid img-thumbnail d-none">
-      		             	<img src="images/QuizLogo.png" class="img-fluid img-thumbnail d-none">
-      		             	<img src="images/IMG_20200201_183317.JPG" class="img-fluid img-thumbnail  d-none">
-      		             	<img src="images/10.jpg" class="img-fluid img-thumbnail d-none">
-      		             	<img src="images/BG.png" class="img-fluid img-thumbnail d-none">
-      		             	<img src="images/camra.JPG" class="img-fluid img-thumbnail  d-none">
-      		             	<img src="images/drawing.jpg" class="img-fluid img-thumbnail d-none">
-      		             	<img src="images/IMG_20200201_183442.JPG" class="img-fluid img-thumbnail d-none">
-      		             	<img src="images/IMG_20200201_183511.JPG" class="img-fluid img-thumbnail d-none">
+      		            <div class="col m-3 p-0">
+                      
+                     <!-- Page number -->
+                      <div class="row pageno d-none">
+                        <div class="col-12 incre"><h5 class="text-light"><1/10></h5></div>
+                      </div> 
+ 
+                       <!-- Rules -->
+                        <div class="row" id="rules">
+                          <div class="col-12">
+                             <img src="images/Screenshot.png" alt="Rules" class="img-fluid m-1">
+                          </div>
+                          <div class="col-12">
+                            <img src="images/Startbtn.png" class="closebtn m-1 img-fluid icon" style="max-width:  9em;">
+                          </div>
+                       </div>
+
+                      <!-- Score card -->
+                      <div class="d-none row" id="card" style="height: 31em;">
+                          <div class="col-12 mt-auto">
+                            <h3 class="greeting"></h3>
+                            <h3 class="marks"></h3>
+                          </div> 
+                          <div class="col-12 mt-3">
+                            <button type="link" class="btn btn-light restart">Restart</button>
+                          </div>
+                      </div>
+
+                      <!-- Images  --> 
+                       <!-- <div class="row"> -->
+                        <div class="col-12 movieimages">
+                          <img src="images/pic1.JPG" class="d-none img-thumbnail">
+                          <img src="images/IMG_20210108_165854.JPG" class="img-fluid img-thumbnail d-none">
+                          <img src="images/IMG_20210108_165820.JPG" class="img-fluid img-thumbnail d-none">
+                          <img src="images/IMG_20210108_165813.JPG" class="img-fluid img-thumbnail  d-none">
+                          <img src="images/IMG_20210108_165947.JPG" class="img-fluid img-thumbnail d-none">
+                          <img src="images/IMG_20210108_165742.JPG" class="img-fluid img-thumbnail d-none">
+                          <img src="images/IMG_20210108_165718.JPG" class="img-fluid img-thumbnail  d-none">
+                          <img src="images/IMG_20210108_165539.JPG" class="img-fluid img-thumbnail d-none">
+                          <img src="images/face.jpg" class="img-fluid img-thumbnail d-none">
+                          <img src="images/IMG_20210108_165531.JPG" class="img-fluid img-thumbnail d-none">
+                        </div>
+                      </div>
       		             </div> 
-      		          </div>
-      		          <div class="row">
-      		       	     <div class="col d-flex text-center m-2">
-      		       	  	    <input type="text" name="FilmName" class="form-control ">
+
+                    <!-- chances and time out -->
+                    <div class="row text-center justify-content-center" id="nochanceleft">
+                       <div class="col-md-3">
+                         <h5 class="font-weight-bold text-danger"></h5>
+                       </div>
+                    </div>
+
+                    <!-- input text -->
+      		          <div class="row d-none inputarea">
+      		       	     <div class="col d-flex text-center justify-content-center m-2">
+      		       	  	    <input type="text" name="FilmName" class="form-sm-control-lg" autocomplete="off">
       		       	  	    <button type="submit" class="btn btn-danger nextbtn">Done</button>
       		       	     </div>
-      		       </div>
+      		          </div>
       		       </div>
       		   </div>
-      		   <!--<div class="row mt-2">	
-      		       <div class="col-12  d-flex flex-row justify-content-center">
-      		          <button type="button" class="d-sm-none m-1">EXIT</button>
-      		          <button type="submit" class="m-1 nextbtn">NEXT</button>
-      		       </div>
-      		   </div>-->
-      	    </div>
 
-         <!-- Score card -->
-          <div class="bg-success position-absolute d-none row" id="card">
-           <div> 
-    		     <div class="col-12">
-               <h3 class="greeting"></h3>
-             </div>
-             <div class="col-12">
-               <h3 class="marks">Score:</h3>
-             </div>
-          </div>
-    	    </div>
+      	 </div>
     </div>
-
-    <!-- Footer -->
-       <div class="row bg-light footer">
-  			<div class="col text-center">
-  			   <b>Follow us on</b>	
-  			  <ul class="text-danger m-1 list-group  d-flex flex-row list-unstyled d-inline-flex">
-  			   	<li class="m-1">
-  			   		<a href="https://www.instagram.com/" class="list-group-item-action" title="Instagram"><i class="fa fa-instagram icon" aria-hidden="true" style="font-size:20px; color:brown"></i></a>
-  			   	</li>
-  			   	<li class="m-1">
-  			   		<a href="mailto:joe@example.com" class="list-group-item-action" title="Email"><i class="fa fa-envelope  icon" aria-hidden="true" style="font-size:20px; color:brown"></i></a>
-  			   	</li>
-  			   	<li class="m-1"><a href="tel: 1111222234" class="list-group-item-action" title="Contact"><i class="fa fa-phone  icon" aria-hidden="true" style="font-size:20px; color:brown"></i></a>
-  			   	</li>
-	          </ul>
-	           <p>copyright &copy; 2021 OLLYWOOD</p>
-  			</div>
-  		</div>
-
    </div>
   <script src="jquery-3.5.1.js"></script>
+  <script src="jquery.animate-colors.js"></script>
   <script src="ollygame.js"></script>
 </body>
 </html>
