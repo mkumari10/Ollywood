@@ -1,6 +1,6 @@
 # Ollywood
-1.Film Guessing Game(Hollywood and Bollywood Both)
-2.Responsive Website
+- Film Guessing Game(Hollywood and Bollywood Both)
+- Responsive Website
 
 # Rules
 1. Identify the Film and write the film name in the box.
